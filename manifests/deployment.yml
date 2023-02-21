@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: viktorioussspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: viktorioussspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: viktorioussspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: viktorioussspipelinesjavascriptdocker 
+          image: viktorioustap.azurecr.io/viktorioussspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
