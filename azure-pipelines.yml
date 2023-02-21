@@ -56,7 +56,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'AKS01.azuredevops'
+    environment: 'AKS02.azuredevops'
     strategy:
       runOnce:
         deploy:
@@ -86,7 +86,7 @@ stages:
     pool:
       vmImage: $(vmImageName)
 
-    environment: 'AKS01.$(k8sNamespaceForPR)'
+    environment: 'AKS02.$(k8sNamespaceForPR)'
     strategy:
       runOnce:
         deploy:
